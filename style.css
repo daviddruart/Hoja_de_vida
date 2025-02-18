@@ -1,0 +1,134 @@
+body {
+    margin:0;
+    padding:0;
+    background-color: #aba9a3;
+}
+
+/*NOMBRE, IMAGEN Y CONTACTO*/
+
+.name {
+    width: 100%;
+    height: 300px;
+    background-color: #1f1f1f;
+    border-bottom: 20px solid rgb(255, 166, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.name .content {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left:25%;
+}
+
+.name .content .p-1{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 65px;
+    margin-bottom: 0;
+}
+
+.name .content .p-2{
+    color: rgba(255, 255, 255, 0.666);
+    border-bottom: 2px rgba(255, 255, 255, 0.666) solid;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.name .content .p-3{
+    color: rgba(255, 255, 255, 0.666);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.name .content .ul-1{
+    color: rgba(255, 255, 255, 0.666);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.name .img {
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    width: 180px;
+    height: 200px;
+    border-radius: 40%;
+    overflow:hidden;
+}
+
+.name .img img {
+    width: 180px;
+    height: 250px;
+}
+
+/*CUERPO E INFORMACION*/
+
+.info {
+    width: 90%;
+    height: auto;
+    background:rgba(255, 166, 0, 0.744);
+    margin:5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.info:hover {
+    transform: scale(1.1);
+}
+
+.info .tituloseccion {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 5px black;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: 2px white solid;
+}
+
+.info .tituloinfo {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.322);
+    font-weight: bolder;
+    font-size: large;
+    display: inline;
+    margin-right: 20px;
+}
+
+.info .infoinfo {
+    color: rgb(7, 7, 7);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: large;
+    display: inline;
+    text-align: left;
+}
+
+.info .infoperfil{
+    color: rgb(7, 7, 7);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: large;
+    text-align: center;
+}
+
+.info .ul-2{
+    color: rgb(7, 7, 7);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: large;
+    display: inline 80px;
+}
