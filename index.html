@@ -1,253 +1,333 @@
 <!DOCTYPE html>
 <html lang="es">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width">
-    <title>Hoja de vida</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device=width", initial-sacale="1.0">
     <link rel="stylesheet" href="style.css">
+    <title>CV Cristian Rincon</title>
 </head>
 <body>
-    <div class="name">
-        <div class="img">
-            <img src="fotohv.jpg" alt="">
+    <!-- SECCION INICIO -->
+    <section class="inicio" id="inicio">
+        <div class="contenido-seccion">
+            <header>
+                <div class="nav-bar" onclick="MostrarOcultarMenu()">
+                    <!-- menu de guia -->
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <nav id="nav" class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobremi">Sobre mí</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#resumen">Experiencia y estudios</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="logo">
+                    C<span class="color">R</span>
+                </div>
+            </header>
+            <div class="info">
+                <h1>CRISTIAN DAVID RINCON</h1>
+                <h2>DESARROLLADOR DE SOFTWARE</h2>
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="foto">
+                <img src="img/fotohv.jpg" alt="">
+            </div>
         </div>
-        <div class="content">
-            <p class="p-1">Cristian David Rincon</p>
-            <p class="p-2">Estudiante en desarrollo de software</p>
-            <p class="p-3">Contacto:</p>
-            <ul class="ul-1">
-                <li>317 252 7340</li>
-                <li>davidrincondru08@gmail.com</li>
-            </ul>
-        </div> 
-    </div>
-    <div class="info">
-        <p class="tituloseccion">
-            Perfil 
-        <p class="infoperfil">
-            Tengo capacidad de expresar lo aprendido con responsabilidad, 
-            respeto y optimismo. Al realizar cualquier labor lo hago con 
-            interés siendo coherente, aportando calidad y creatividad 
-            sin pasar por alto la respectiva normativa de la empresa.
-        </p>
-    </div>
-    <div class="info">
-        <p class="tituloseccion">
-            Experiencia laboral
-        </p>
-        <p class="tituloinfo">
-            Alkosto (Corbeta SAS)
-        </p>
-        <br>
-        <p class="infoinfo">
-            Auxiliar de almacen (05/2024-actualmente)
-        </p>
-        <br><br>
-        <p class="tituloinfo">
-            Funciones:
-        </p>
-        <p class="infoinfo">
-            Recepción de mercancías, almacenamiento, 
-            gestión de inventarios, preparación de pedidos, 
-            despacho de mercancías, mantenimiento de 
-            registros, seguridad de productos y cumplimiento 
-            de metas a cargo. 
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Logros:
-        </p>
-        <p class="infoinfo">
-            Seguridad y conocimiento para tomar decisiones             
-            precisas y acertadas. Orden y disciplina en entregas de metas
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Jefe directo:
-        </p>
-        <p class="infoinfo">
-            Gustavo Torres
-        </p>
-        <br>
-        <br>
-        <br>
+    </section>
 
+    <!-- SECCION SOBRE MI -->
+    <section class="sobremi" id="sobremi">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Sobre Mi</h2>
+            <h3>Detalles personales</h3>
+            <p class="especialidades">
+                Aspirante a Desarrollador de Software con bases sólidas y actitud proactiva
+            </p>
+            <p>
+                Comprometido con mi crecimiento profesional, con bases sólidas y gran motivación por aplicar y expandir sus conocimientos en entornos reales.
+            </p>
+            <div class="fila">
+                <div class="col">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="titulo_detalle">Perfil</span>
+                    <p>
+                        Estudiante de Desarrollo de Software con sólidos conocimientos adquiridos en el ámbito académico y gran entusiasmo 
+                        por aplicar lo aprendido en entornos reales. Aunque no cuento con experiencia laboral formal, me destaco por mi dedicación, facilidad para el 
+                        aprendizaje autodidacta y fuerte interés en seguir creciendo en el área tecnológica. Con conocimientos en programación, 
+                        bases de datos y desarrollo web, busco integrarme a un equipo donde pueda aportar y, al mismo tiempo, seguir formándome como profesional.
+                    </p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="titulo_detalle">Ubicaión</span>
+                    <p>Bogotá D.C.</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="titulo_detalle">Intereses</span>
+                    <p> 
+                        <ul>
+                            <li>Apasionado por la tecnología y el aprendizaje continuo, me interesa participar en proyectos que me permitan aplicar</li>
+                            <li>Participación en proyectos reales para adquirir experiencia práctica.</li>
+                            <li>Aprendizaje continuo en programación y nuevas tecnologías.</li>
+                            <li>Contribuir en proyectos de código abierto.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="tituloinfo">
-            Manpower (More Products SAS)
-        </p>
-        <br>
-        <p class="infoinfo">
-            Asesor comercial (11/2023-01/2024)
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Funciones:
-        </p>
-        <p class="infoinfo">
-            Asesoramiento a clientes, seguimiento de posibles 
-            clientes mayoritarios, control y despacho de 
-            material, área de trabajo actualizada y ordenada. 
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Logros:
-        </p>
-        <p class="infoinfo">
-            Crecimiento profesional, gestión de asistencia 
-            laboral en diferentes puntos de la ciudad. 
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Jefe directo:
-        </p>
-        <p class="infoinfo">
-            Erika Garcia
-        </p>
-        <br>
-        <br>
-        <br>
+    <!-- SECCION HABILIDADES -->
+    <section class="habilidades" id="habilidades">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Mis habilidades</h2>
+            <h3>Me especializo en</h3>
 
+            <div class="fila">
+                <div class="col">
+                    <span>HTML/CSS</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="html">
+                            <!--  -->
+                            
+                        </div>
+                        <span>98%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>JAVASCRIPT</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="javascript">
+                            <!--  -->
+                            
+                        </div>
+                        <span>75%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <span>WORDPRESS</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="wordpress">
+                            <!--  -->
+                            
+                        </div>
+                        <span>45%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>PHOTOSHOP</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="photoshop">
+                            <!--  -->
+                            
+                        </div>
+                        <span>85%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <span>PHP</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="php">
+                            <!--  -->
+                            
+                        </div>
+                        <span>10%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>ILUSTRATOR</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="ilustrator">
+                            <!--  -->
+                            
+                        </div>
+                        <span>95%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="tituloinfo">
-            Sodimac Corona (Homecenter)
-        </p>
-        <br>
-        <p class="infoinfo">
-            Asesor comercial (08/2022-08/2023)
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Funciones:
-        </p>
-        <p class="infoinfo">
-            Asesoramiento a clientes, seguimiento de posibles 
-            clientes mayoritarios, y asistencia de cotizaciones, envios 
-            control y despacho de material, área de trabajo actualizada y ordenada. 
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Logros:
-        </p>
-        <p class="infoinfo">
-            Crecimiento profesional, gestión de asistencia 
-            laboral en diferentes campos al cliente. 
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Jefe directo:
-        </p>
-        <p class="infoinfo">
-            Lorena Moreno
-        </p>
-        <br>
-        <br>
-        <br>
+    <!-- SECCION RESUMEN -->
+    <section class="resumen" id="resumen">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Resumen</h2>
+            <h3>Mi preparación y experiencia</h3>
+            <div class="info">
+                <div class="col">
+                    <span class="titulo">Educación</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2023 - Actualmente</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Me encuentro terminando mi carrera profesional 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Tecnólogo en Desarrollo de Software</h4>
+                                <p>Universidad de San Buenaventura</p>
+                                <span class="promedio">Promedio: 4.3</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2022 - (3 semestres)</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Pospuse mi carrera de Ingeniería Electromecánica debido a problemas de movilidad en la ciudad. 
+                                Sin embargo, no la he olvidado y mantengo el firme deseo de poder concluirla.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Ingeniería Electromecánica</h4>
+                                <p>Instituto Técnico Central La Salle</p>
+                                <span class="promedio">Promedio: 4.5</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2017</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Estudios academicos basicos culminados
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Bachiller Académico</h4>
+                                <p>Centro de Adultos Culturales</p>
+                                <span class="promedio"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col">
+                    <span class="titulo">Experiencia laboral</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>05/2024 - Actualmente</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Recepción de mercancías, almacenamiento, 
+                                gestión de inventarios, preparación de pedidos, 
+                                despacho de mercancías, mantenimiento de 
+                                registros, seguridad de productos y cumplimiento 
+                                de metas a cargo.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Auxiliar de almacen</h4>
+                                <p>Alkosto (Colombiana de comercio Corbeta SAS)</p>
+                                <span class="promedio">Jefe directo: Gustavo Torres</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>11/2023 - 01/2024</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Asesoramiento a clientes, seguimiento de posibles clientes mayoritarios, 
+                                control y despacho de material, área de trabajo actualizada y ordenada.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Asesor Comercial</h4>
+                                <p>Manpower (More products SAS)</p>
+                                <span class="promedio">Jefe directo: Erica Garcia</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>08/2022 - 08/2023</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Asesoramiento a clientes, seguimiento de posibles clientes mayoritarios, 
+                                control y despacho de material, área de trabajo actualizada y ordenada.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Asesor Comercial</h4>
+                                <p>Sodimac Corona (Homecenter)</p>
+                                <span class="promedio">Jefe directo: Lorena Morales</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>03/2018 - 08/2022</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Mantenimiento eléctrico industrial y residencial.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Mantenimiento electrico</h4>
+                                <p>J. R. O. Construcciones elecetricas</p>
+                                <span class="promedio">Jefe directo: Jesus Rincon</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECCION CONTACTO -->
+     <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <h3>Ponte en contacto ahora mismo!</h3>
 
-        <p class="tituloinfo">
-            J. R. O. Construcciones electricas 
-        </p>
-        <br>
-        <p class="infoinfo">
-            Mantenimiento electrico (03/2018-08/2022)
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Funciones:
-        </p>
-        <p class="infoinfo">
-            Instalacion y mantenimiento electrico industrial y residencial.
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Logros:
-        </p>
-        <p class="infoinfo">
-            Crecimiento profesional, gestión de asistencia 
-            laboral en diferentes zonas de la ciudad. Seguridad y 
-            calidad en cada instalacion, cumpliendo con su respectiva normativa.  
-        </p>
-        <br>
-        <p class="tituloinfo">
-            Jefe directo:
-        </p>
-        <p class="infoinfo">
-            Jesus Rincon
-        </p>
-    </div>
+            <div class="fila">
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-phone"></i>Teléfono
+                    </h2>
+                    <span class="info-contacto">317 252 7340</span>
+                </div>
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-envelope"></i>Correo
+                    </h2>
+                    <span class="info-contacto">davidrincondru08@gmail.com</span>
+                </div>
+            </div>
+        </div>
+     </section>
 
-    <div class="info">
-        <p class="tituloseccion">
-            Habilidades 
-        <p class="infopinfo">
-            <ul class="ul-2">
-                <li>Trabajo en equipo</li>
-                <li>Compromiso</li>
-                <li>Creatividad</li>
-                <li>Innovacion</li>
-            </ul>
-        </p>
-    </div>
-
-    <div class="info">
-        <p class="tituloseccion">
-            Intereses 
-        <p class="infopinfo">
-            <ul class="ul-2">
-                <li>Administracion</li>
-                <li>Percepcion de control y calidad</li>
-                <li>Empatia SAC (Servicio al cliente)</li>
-                <li>Interaccion social</li>
-            </ul>
-        </p>
-    </div>
-
-    <div class="info">
-        <p class="tituloseccion">
-            Educacion
-        </p>
-        <p class="tituloinfo">
-            Tecnologo en desarrollo de software
-        </p>
-        <br>
-        <p class="infoinfo">
-            Universidad San Bueneaventura
-        </p>
-        <br>
-        <p class="infoinfo">
-            2023 - Actualmente
-        </p>
-        <br>
-        <br>
-
-        <p class="tituloinfo">
-            Ingenieria electromecanica
-        </p>
-        <br>
-        <p class="infoinfo">
-            2022 - (3 semestres) aplazado
-        </p>
-        <br>
-        <br>
-
-        <p class="tituloinfo">
-            Bachiller academico
-        </p>
-        <br>
-        <p class="infoinfo">
-            Centro de adultos culturales
-        </p>
-        <br>
-        <p class="infoinfo">
-            2017
-        </p>
-        <br>
-        
-    </div>
-
-
-
+     <script src="app.js"></script>
 </body>
 </html>
