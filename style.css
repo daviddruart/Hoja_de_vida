@@ -46,6 +46,15 @@ html{
     margin-bottom: 10px;
     font-weight: bold;
 }
+/* EFECTO HOVER EN MENÚ NAV */
+.inicio .contenido-seccion header nav a{
+    transition: font-size 0.3s, text-shadow 0.3s;
+}
+
+.inicio .contenido-seccion header nav a:hover{
+    font-size: 1.3em;
+    text-shadow: 0 0 10px #ffffff;
+}
 /* ****** */
 
 .inicio .contenido-seccion header .logo{
