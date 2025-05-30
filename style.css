@@ -114,6 +114,9 @@ html{
     color:#fff;
     background-color: #940253;
     box-shadow: 0 0 20px #fff;
+    transition: font-size 0.5s, text-shadow 0.5s;
+    font-size: 1.1em;
+    text-shadow: 0 0 10px #ffffff;
 }
 .inicio .contenido-seccion .foto{
     position: relative;
