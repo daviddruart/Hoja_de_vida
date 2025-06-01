@@ -1,95 +1,119 @@
-//Menu lateral
-var menu_visible = false;
-let menu = document.getElementById("nav");
-function MostrarOcultarMenu(){
-    if(menu_visible==false){//si esta oculto
-        menu.style.display = "block";
-        menu_visible = true;
-    }
-    else{
-        menu.style.display = "none";
-        menu_visible = false;
-    }
-}
-//oculto el menu una vez se haga la seleccion
-let links = document.querySelectorAll("nav a")
-for(var x = 0; x <links.length;x++){
-    links[x].onclick = function(){
-        menu.style.display = "none";
-        menu_visible = false;
-    }
+// Menú lateral
+let menu_visible = false;
+const menu = document.getElementById("nav");
+
+function MostrarOcultarMenu() {
+    menu.style.display = menu_visible ? "none" : "block";
+    menu_visible = !menu_visible;
 }
 
-//animacion de barras
-function crearBarra(id_barra){
-    for(i=0;i<=16;i++){
-        let div = document.createElement("div");
+// Ocultar menú al hacer clic en un enlace
+const links = document.querySelectorAll("nav a");
+links.forEach(link => {
+    link.onclick = () => {
+        menu.style.display = "none";
+        menu_visible = false;
+    };
+});
+
+// Crear una barra con 17 divisiones
+function crearBarra(id_barra) {
+    for (let i = 0; i <= 16; i++) {
+        const div = document.createElement("div");
         div.className = "e";
         id_barra.appendChild(div);
     }
 }
 
-//selecciona todas las barras generales y luego manipular
-let html = document.getElementById("html");
-crearBarra(html);
-let javascript = document.getElementById("javascript");
-crearBarra(javascript);
-let wordpress = document.getElementById("wordpress");
-crearBarra(wordpress);
-let photoshop = document.getElementById("photoshop");
-crearBarra(photoshop);
-let php = document.getElementById("php");
-crearBarra(php);
-let ilustrator = document.getElementById("ilustrator");
-crearBarra(ilustrator);
+// Lista de habilidades con su ID y cantidad de barras a pintar
+const habilidades = [
+    { id: "logica", cantidad: 16 },
+    { id: "comprension", cantidad: 11 },
+    { id: "lenguaje", cantidad: 11 },
+    { id: "equipo", cantidad: 15 },
+    { id: "aprendizaje", cantidad: 16 },
+    { id: "versiones", cantidad: 11 }
+];
 
-//Ahora voy a guardar la cantidad de barritas que se van a ir pintando por cada barar
-//para eso utilizo un arreglo, cada posiciòn pertenece a un elemento
-//comienzan en -1 porque no tiene ninguna pintada al iniciarse
-let contadores = [-1,-1,-1,-1,-1,-1];
-//esta variable la voy a utilizar de bandera para saber si ya ejecuto la animación
-let entro = false;
+// Inicializar barras y contadores
+const contadores = [];
+habilidades.forEach((hab, index) => {
+    const elemento = document.getElementById(hab.id);
+    crearBarra(elemento);
+    contadores[index] = -1;
+});
 
-//función que aplica las animaciones de la habilidades
-function efectoHabilidades(){
-    var habilidades = document.getElementById("habilidades");
-    var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
-    if(distancia_skills>=300 && entro==false){
-        entro = true;
-        const intervalHtml = setInterval(function(){
-            pintarBarra(html, 16, 0, intervalHtml);
-        },100);
-        const intervalJavascript = setInterval(function(){
-            pintarBarra(javascript, 11, 1, intervalJavascript);
-        },100);
-        const intervalWordpress = setInterval(function(){
-            pintarBarra(wordpress, 11, 2, intervalWordpress);
-        },100);
-        const intervalPhotoshop = setInterval(function(){
-            pintarBarra(photoshop, 15, 3, intervalPhotoshop);
-        },100);
-        const intervalPhp = setInterval(function(){
-            pintarBarra(php, 16, 4, intervalPhp);
-        },100);
-        const intervalIlustrator = setInterval(function(){
-            pintarBarra(ilustrator, 11, 5, intervalIlustrator);
-        },100);
-    }
-}
-
-//lleno una barra particular con la cantidad indicada
-function pintarBarra(id_barra, cantidad, indice, interval){
+// Pintar barras animadas
+function pintarBarra(elemento, cantidad, indice, interval) {
     contadores[indice]++;
-    x = contadores[indice];
-    if(x < cantidad){
-        let elementos = id_barra.getElementsByClassName("e");
+    const x = contadores[indice];
+    if (x < cantidad) {
+        const elementos = elemento.getElementsByClassName("e");
         elementos[x].style.backgroundColor = "#940253";
-    }else{
-        clearInterval(interval)
+    } else {
+        clearInterval(interval);
     }
 }
 
-//detecto el scrolling del mouse para aplicar la animación de la barra
-window.onscroll = function(){
-    efectoHabilidades();
+// Función principal para ejecutar todas las animaciones
+function animarBarras() {
+    habilidades.forEach((hab, index) => {
+        const elemento = document.getElementById(hab.id);
+        const intervalo = setInterval(() => {
+            pintarBarra(elemento, hab.cantidad, index, intervalo);
+        }, 100);
+    });
 }
+
+// Observer para detectar cuando la sección entra en pantalla
+let entro = false;
+const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entro) {
+            entro = true;
+            animarBarras();
+            obs.disconnect();
+        }
+    });
+}, { threshold: 0.5 });
+
+observer.observe(document.getElementById("habilidades"));
+
+//
+
+
+function animarBarraConNumero(idBarra, idNumero, porcentajeFinal) {
+  const barraLlena = document.getElementById(idBarra);
+  const numero = document.getElementById(idNumero);
+  let anchoActual = 0;
+
+  const intervalo = setInterval(() => {
+    if (anchoActual >= porcentajeFinal) {
+      clearInterval(intervalo);
+      numero.textContent = porcentajeFinal + '%';
+    } else {
+      anchoActual++;
+      barraLlena.style.width = anchoActual + '%';
+      numero.textContent = anchoActual + '%';
+    }
+  }, 15);
+}
+
+let animado = false;
+
+function efectoHabilidades() {
+  const habilidades = document.getElementById("habilidades");
+  const distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+
+  if (distancia_skills >= 300 && !animado) {
+    animado = true;
+    animarBarraConNumero('logica-barra', 'logica-porcentaje', 98);
+    animarBarraConNumero('comprension-barra', 'comprension-porcentaje', 70);
+    animarBarraConNumero('lenguaje-barra', 'lenguaje-porcentaje', 70);
+    animarBarraConNumero('equipo-barra', 'equipo-porcentaje', 90);
+    animarBarraConNumero('aprendizaje-barra', 'aprendizaje-porcentaje', 80);
+    animarBarraConNumero('versiones-barra', 'versiones-porcentaje', 70);
+  }
+}
+
+window.addEventListener('scroll', efectoHabilidades);
