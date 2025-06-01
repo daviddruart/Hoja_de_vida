@@ -1,352 +1,366 @@
-<!DOCTYPE html>
-<html lang="es">
-    <link rel="stylesheet" href="style.css">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="viewport" content="width=device=width", initial-sacale="1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CV Cristian Rincon</title>
-    <link rel="icon" href="img/CR.png">
-</head>
-<body>
-    <!-- SECCION INICIO -->
-    <section class="inicio" id="inicio">
-        <div class="contenido-seccion">
-            <header>
-                <div class="nav-bar" onclick="MostrarOcultarMenu()">
-                    <!-- menu de guia -->
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <nav id="nav" class="nav">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobremi">Sobre mí</a>
-                    <a href="#habilidades">Habilidades</a>
-                    <a href="#resumen">Experiencia y estudios</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-                <div class="logo">
-                    C<span class="color">R</span>
-                </div>
-            </header>
-            <div class="info">
-                <h1>CRISTIAN DAVID RINCON</h1>
-                <h2>DESARROLLADOR DE SOFTWARE</h2>
-                <div class="redes">
-                    <a href="https://www.instagram.com/cris.dru.art/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/david-rincon-0b050b290/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@david.art.d"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://co.pinterest.com/davidrincondru/"><i class="fa-brands fa-pinterest"></i></a>
-                </div>
-            </div>
-            <div class="foto">
-                <img src="img/fotohv.jpg" alt="">
-            </div>
-        </div>
-    </section>
+/* fuentes insertadas */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yellowtail&display=swap');
+*{
+    font-family: "Merriweather Web";
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
 
-    <!-- SECCION SOBRE MI -->
-    <section class="sobremi" id="sobremi">
-        <div class="contenido-seccion">
-            <h2 class="titulo-seccion">Sobre Mi</h2>
-            <h3>Detalles personales</h3>
-            <p class="especialidades">
-                Aspirante a Desarrollador de Software con bases sólidas y actitud proactiva
-            </p>
-            <p>
-                Comprometido con mi crecimiento profesional, con bases sólidas y gran motivación por aplicar y expandir sus conocimientos en entornos reales.
-            </p>
-            <div class="fila">
-                <div class="col">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="titulo_detalle">Perfil</span>
-                    <p>
-                        Estudiante de Desarrollo de Software con sólidos conocimientos adquiridos en el ámbito académico y gran entusiasmo 
-                        por aplicar lo aprendido en entornos reales. Aunque no cuento con experiencia laboral formal en mi carrera, me destaco por mi dedicación, facilidad para el 
-                        aprendizaje autodidacta y fuerte interés en seguir creciendo en el área tecnológica. Con conocimientos en programación, 
-                        bases de datos y desarrollo web, busco integrarme a un equipo donde pueda aportar y, al mismo tiempo, seguir formándome como profesional.
-                    </p>
-                </div>
-                <div class="col">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span class="titulo_detalle">Ubicaión</span>
-                    <p>Bogotá D.C.</p>
-                </div>
-                <div class="col">
-                    <i class="fa-solid fa-flag"></i>
-                    <span class="titulo_detalle">Intereses</span>
-                    <p> 
-                        <ul>
-                            <li>Apasionado por la tecnología y el aprendizaje continuo, me interesa participar en proyectos que me permitan aplicar</li>
-                            <li>Participación en proyectos reales para adquirir experiencia práctica.</li>
-                            <li>Aprendizaje continuo en programación y nuevas tecnologías.</li>
-                            <li>Contribuir en proyectos de código abierto.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECCION HABILIDADES -->
-    <section class="habilidades" id="habilidades">
-        <div class="contenido-seccion">
-            <h2 class="titulo-seccion">Mis habilidades</h2>
-            <h3>Me especializo en</h3>
+/* SECCION INICIO */
+.inicio{
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+    url(img/escritorio.jpg);
+    background-size: cover;
+    background-position: center center;
+    color:aliceblue;
+}
+.inicio .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 0 10px;
+}
+.inicio .contenido-seccion{
+    padding: 30px;
+}
 
-            <div class="fila">
-                <div class="col">
-                    <span>LÓGICA DE PROGRAMACIÓN</span>
-                    <div class="cont-barra">
-                        <div class="barra" id="logica">
-                            <!--  -->
-                            
-                        </div>
-                        <div class="calculo">
-                            <div class="barra-llena" id="logica-barra"></div>
-                            <span class="porcentaje" id="logica-porcentaje">%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <span>ESTRUCTURAS DE DATOS Y ALGORITMOS</span>
-                    <div class="cont-barra">
-                        <div class="barra" id="comprension">
-                            <!--  -->
-                            
-                        </div>
-                        <div class="calculo">
-                            <div class="barra-llena" id="comprension-barra"></div>
-                            <span class="porcentaje" id="comprension-porcentaje">%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="col">
-                    <span>LENGUAJE DE PROGRAMACIÓN</span>
-                    <div class="cont-barra">
-                        <div class="barra" id="lenguaje">
-                            <!--  -->
-                            
-                        </div>
-                        <div class="calculo">
-                            <div class="barra-llena" id="lenguaje-barra"></div>
-                            <span class="porcentaje" id="lenguaje-porcentaje">%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <span>TRABAJO EN EQUIPO Y COMUNICACIÓN</span>
-                    <div class="cont-barra">
-                        <div class="barra" id="equipo">
-                            <!--  -->
-                            
-                        </div>
-                        <div class="calculo">
-                            <div class="barra-llena" id="equipo-barra"></div>
-                            <span class="porcentaje" id="equipo-porcentaje">%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="col">
-                    <span>CAPACIDAD DE APRENDIZAJE AUTÓNOMO</span>
-                    <div class="cont-barra">
-                        <div class="barra" id="aprendizaje">
-                            <!--  -->
-                            
-                        </div>
-                        <div class="calculo">
-                            <div class="barra-llena" id="aprendizaje-barra"></div>
-                            <span class="porcentaje" id="aprendizaje-porcentaje">%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <span>CONTROL DE VERSIONES (GIT)</span>
-                    <div class="cont-barra">
-                        <div class="barra" id="versiones">
-                            <!--  -->
-                            
-                        </div>
-                        <div class="calculo">
-                            <div class="barra-llena" id="versiones-barra"></div>
-                            <span class="porcentaje" id="versiones-porcentaje">%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* MENU LATERAL */
+.inicio .contenido-seccion header nav{
+    position: fixed;
+    margin-left: 60px;
+    background-color: #940253;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 99;
+    display: none;
+}
+.inicio .contenido-seccion header nav a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* EFECTO HOVER EN MENÚ NAV */
+.inicio .contenido-seccion header nav a{
+    transition: font-size 0.3s, text-shadow 0.3s;
+}
 
-    <!-- SECCION RESUMEN -->
-    <section class="resumen" id="resumen">
-        <div class="contenido-seccion">
-            <h2 class="titulo-seccion">Resumen</h2>
-            <h3>Mi preparación y experiencia</h3>
-            <div class="info">
-                <div class="col">
-                    <span class="titulo">Educación</span>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2023 - Actualmente</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Me encuentro terminando mi carrera profesional 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Tecnólogo en Desarrollo de Software</h4>
-                                <p>Universidad de San Buenaventura</p>
-                                <span class="promedio">Promedio: 4.3</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2022 - (3 semestres)</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Pospuse mi carrera de Ingeniería Electromecánica debido a problemas de movilidad en la ciudad. 
-                                Sin embargo, no la he olvidado y mantengo el firme deseo de poder concluirla.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Ingeniería Electromecánica</h4>
-                                <p>Instituto Técnico Central La Salle</p>
-                                <span class="promedio">Promedio: 4.5</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2017</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Estudios academicos basicos culminados
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Bachiller Académico</h4>
-                                <p>Centro de Adultos Culturales</p>
-                                <span class="promedio"></span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col">
-                    <span class="titulo">Experiencia laboral</span>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>05/2024 - Actualmente</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Recepción de mercancías, almacenamiento, 
-                                gestión de inventarios, preparación de pedidos, 
-                                despacho de mercancías, mantenimiento de 
-                                registros, seguridad de productos y cumplimiento 
-                                de metas a cargo.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Auxiliar de almacen</h4>
-                                <p>Alkosto (Colombiana de comercio Corbeta SAS)</p>
-                                <span class="promedio">Jefe directo: Gustavo Torres</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>11/2023 - 01/2024</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Asesoramiento a clientes, seguimiento de posibles clientes mayoritarios, 
-                                control y despacho de material, área de trabajo actualizada y ordenada.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Asesor Comercial</h4>
-                                <p>Manpower (More products SAS)</p>
-                                <span class="promedio">Jefe directo: Erica Garcia</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>08/2022 - 08/2023</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Asesoramiento a clientes, seguimiento de posibles clientes mayoritarios, 
-                                control y despacho de material, área de trabajo actualizada y ordenada.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Asesor Comercial</h4>
-                                <p>Sodimac Corona (Homecenter)</p>
-                                <span class="promedio">Jefe directo: Lorena Morales</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>03/2018 - 08/2022</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Mantenimiento eléctrico industrial y residencial.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Mantenimiento electrico</h4>
-                                <p>J. R. O. Construcciones elecetricas</p>
-                                <span class="promedio">Jefe directo: Jesus Rincon</span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
+.inicio .contenido-seccion header nav a:hover{
+    font-size: 1.3em;
+    text-shadow: 0 0 10px #ffffff;
+}
+/* ****** */
 
-    <!-- SECCION CONTACTO -->
-     <section class="contacto" id="contacto">
-        <div class="contenido-seccion">
-            <h2 class="titulo-seccion">Contacto</h2>
-            <h3>Ponte en contacto ahora mismo!</h3>
+.inicio .contenido-seccion header .logo{
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "Yellowtail";
+    text-shadow: 0 0 35px #fff;
+}
+.inicio .contenido-seccion header .logo .color{
+    color:#940253;
+    font-family: "Yellowtail";
+}
+.inicio .contenido-seccion header .nav-bar{
+    position: fixed;
+    background-color:#940253;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.inicio .contenido-seccion header .nav-bar:hover{
+    box-shadow: 0 0 35px #fff;
+}
+.inicio .contenido-seccion .info{
+    padding-bottom: 130px;
+}
+.inicio .contenido-seccion .info h1{
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+.inicio .contenido-seccion .info h2{
+    font-weight: normal;
+    font-size: 20ox;
+    margin-top: -10px;
+    letter-spacing: 2px;
+}
+.inicio .contenido-seccion .info .redes{
+    margin: 20px 0;
+}
+.inicio .contenido-seccion .info .redes a{
+    display: inline-block;
+    text-decoration: none;
+    background-color:black;
+    color: #940253;
+    border: 1px solid #940253;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    transition: .3s;
+}
+.inicio .contenido-seccion .info .redes a:hover{
+    color:#fff;
+    background-color: #940253;
+    box-shadow: 0 0 20px #fff;
+    transition: font-size 0.5s, text-shadow 0.5s;
+    font-size: 1.1em;
+    text-shadow: 0 0 10px #ffffff;
+}
+.inicio .contenido-seccion .foto{
+    position: relative;
+}
+.inicio .contenido-seccion .foto img{
+    max-width: 190px;
+    border-radius: 50%;
+    border: 5px solid #940253;
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+}
 
-            <div class="fila">
-                <div class="col">
-                    <h2>
-                        <i class="fa-solid fa-phone"></i>Teléfono
-                    </h2>
-                    <span class="info-contacto">317 252 7340</span>
-                </div>
-                <div class="col">
-                    <h2>
-                        <i class="fa-solid fa-envelope"></i>Correo
-                    </h2>
-                    <span class="info-contacto">davidrincondru08@gmail.com</span>
-                </div>
-            </div>
-        </div>
-     </section>
+/* estilos generales */
+.titulo-seccion{
+    font-family: "Yellowtail";
+}
+/* SECCION SOBRE MI */
+.sobremi{
+    background-color: #e6e6e6;
+    padding: 140px 0 100px 0;
+    text-align: center;
+}
+.sobremi .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.sobremi .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.sobremi .contenido-seccion .especialidades{
+    color:#940253;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.sobremi .contenido-seccion ul li{
+    text-align: left;
+    margin-left: 0; 
+    padding-left: 20px;
+}
+.sobremi .contenido-seccion p ul li{
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+.sobremi .contenido-seccion .fila{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.sobremi .contenido-seccion .fila .col{
+    width: 30%;
+}
+.sobremi .contenido-seccion .fila .col i{
+    color:#940253;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #940253;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.sobremi .contenido-seccion .fila .col span{
+    display: block;
+    font-weight: bold;
+    margin: 8px 0;
+}
 
-     <script src="app.js"></script>
-</body>
-</html>
+
+/* SECCION HABILIDADES */
+.habilidades{
+    padding: 80px 0 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+    url(img/habilidades.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #fff;
+}
+.habilidades .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.habilidades .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.habilidades .contenido-seccion .fila{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.habilidades .contenido-seccion .fila .col{
+    width: 47%;
+    text-align: left;
+}
+.habilidades .contenido-seccion .fila .col .cont-barra{
+    display: flex;
+    align-items: center;
+}
+.habilidades .contenido-seccion .barra{
+    display: flex;
+    border: 1px solid #940253;
+    padding: 2px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.habilidades .contenido-seccion .barra .e{
+    background-color: #363636;
+    width: 20px;
+    height: 30px;
+    margin-top: 2px;
+}
+.porcentaje {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #e6e6e6;
+    user-select: none; /* para que no se seleccione al arrastrar */
+  }
+  
+  
+/* SECCION RESUMEN */
+.resumen{
+    background-color: #e6e6e6;
+    padding: 140px 0 100px 0;
+    text-align: center;
+}
+.resumen .contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 10px;
+}
+.resumen .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.resumen .contenido-seccion .info{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.resumen .contenido-seccion .info .col{
+    width: 45%;
+}
+.resumen .contenido-seccion .info .col .titulo{
+    display: inline-block;
+    color: #940253;
+    font-weight: bold;
+    border: 2px solid #940253;
+    padding: 10px;    
+}
+.resumen .contenido-seccion .info .col table{
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+.resumen .contenido-seccion .info .col table .datos{
+    width: 40%;
+    border-bottom: 1px solid #bab9b9;
+}
+.resumen .contenido-seccion .info .col table h4{
+    margin-top: 10px;
+}
+.resumen .contenido-seccion .info .col table h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.resumen .contenido-seccion .info .col table p{
+    font-size: 14px;
+}
+.resumen .contenido-seccion .info .col table .promedio{
+    display: block;
+    color: #940253;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.resumen .contenido-seccion .info .col table .descripcion{
+    border-left: 1px solid #bab9b9;
+    padding-left: 20px;
+}
+
+/* SECCION CONTACTO */
+.contacto{
+    background-color: #202020;
+    padding: 140px 0 100px 0;
+    color:#e6e6e6;
+    text-align: center;
+}
+.contacto .contenido-seccion h3{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.contacto .contenido-seccion .fila{
+    display: flex;
+    justify-content: space-around;
+}
+.contacto .contenido-seccion .fila .col{
+    margin-top: 50px;
+}
+.contacto .contenido-seccion .fila .col h2{
+    color:#940253;
+}
+
+ /* SECCION RESPONSIVE */
+ @media screen and (max-width:800px){
+    .habilidades .contenido-seccion .fila{
+        display: block;
+    }
+    .habilidades .contenido-seccion .fila .col{
+        width: 100%;
+        text-align: center;
+    }
+    .habilidades .contenido-seccion .fila .col .cont-barra{
+        justify-content: center;
+    }
+    .sobremi .contenido-seccion .fila{
+        display: block;
+    }
+    .sobremi .contenido-seccion .fila .col{
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .resumen .contenido-seccion .info{
+        display: block;
+    }
+    .resumen .contenido-seccion .info .col{
+        width: 90%;
+        margin: auto;
+    }
+    .resumen .contenido-seccion .info .col .titulo{
+        display: block;
+        text-align: center;
+    }
+    .resumen .contenido-seccion .info .col table{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .contacto .contenido-seccion .fila{
+        display: block;
+    }
+}
