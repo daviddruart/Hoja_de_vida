@@ -18,34 +18,64 @@ links.forEach(link => {
 
 // Definir habilidades con sus porcentajes
 const habilidades = [
-    { barra: 'UX/UI-barra', porcentaje: 'UX/UI-porcentaje', valor: 85 },
+    { barra: 'UX/UI-barra', porcentaje: 'UX/UI-porcentaje', valor: 80 },
     { barra: 'FRONTEND-barra', porcentaje: 'FRONTEND-porcentaje', valor: 90 },
     { barra: 'RESPONSIVE-barra', porcentaje: 'RESPONSIVE-porcentaje', valor: 90 },
-    { barra: 'LOGICA-barra', porcentaje: 'LOGICA-porcentaje', valor: 85 },
+    { barra: 'LOGICA-barra', porcentaje: 'LOGICA-porcentaje', valor: 80 },
     { barra: 'TEAM-barra', porcentaje: 'TEAM-porcentaje', valor: 90 },
     { barra: 'versiones-barra', porcentaje: 'versiones-porcentaje', valor: 70 }
 ];
 
-// Animar barra con número
+// Crear una barra con 16 divisiones
+function crearBarra(id_barra) {
+    const contenedor = document.getElementById(id_barra);
+    for (let i = 0; i < 16; i++) {
+        const div = document.createElement("div");
+        div.className = "e";
+        contenedor.appendChild(div);
+    }
+}
+
+// Inicializar todas las barras
+habilidades.forEach(hab => {
+    crearBarra(hab.barra.replace('-barra', ''));
+});
+
+// Animar barra con divisiones
 function animarBarraConNumero(idBarra, idNumero, porcentajeFinal) {
-    const barraLlena = document.getElementById(idBarra);
     const numero = document.getElementById(idNumero);
-    let anchoActual = 0;
+    const barraId = idBarra.replace('-barra', '');
+    const barraDiv = document.getElementById(barraId);
+    const bloques = barraDiv.getElementsByClassName('e');
     
-    // Calcular cuántos frames necesitamos (15ms por frame)
-    const tiempoTotal = 2000; // 2 segundos para todas las barras
+    // Calcular cuántos bloques se deben pintar
+    const totalBloques = bloques.length;
+    const bloquesPintar = Math.round((porcentajeFinal / 100) * totalBloques);
+    
+    // Calcular frames para la animación (2 segundos)
+    const tiempoTotal = 2000;
     const frames = tiempoTotal / 15;
-    const incrementoPorFrame = porcentajeFinal / frames;
+    const incrementoBloque = bloquesPintar / frames;
+    let bloqueActual = 0;
 
     const intervalo = setInterval(() => {
-        if (anchoActual >= porcentajeFinal) {
+        if (bloqueActual >= bloquesPintar) {
             clearInterval(intervalo);
-            barraLlena.style.width = porcentajeFinal + '%';
             numero.textContent = porcentajeFinal + '%';
         } else {
-            anchoActual += incrementoPorFrame;
-            barraLlena.style.width = anchoActual + '%';
-            numero.textContent = Math.floor(anchoActual) + '%';
+            bloqueActual += incrementoBloque;
+            const bloquesPintados = Math.floor(bloqueActual);
+            
+            // Pintar bloques hasta el número actual
+            for (let i = 0; i < totalBloques; i++) {
+                if (i < bloquesPintados) {
+                    bloques[i].style.backgroundColor = '#940253';
+                } else {
+                    bloques[i].style.backgroundColor = '#363636';
+                }
+            }
+            
+            numero.textContent = Math.floor((bloquesPintados / totalBloques) * 100) + '%';
         }
     }, 15);
 }

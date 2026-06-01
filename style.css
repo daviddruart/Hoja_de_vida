@@ -224,38 +224,31 @@ html{
 }
 .habilidades .contenido-seccion .barra{
     display: flex;
-    border: 1px solid #940253;
-    padding: 2px;
-    border-radius: 3px;
-    margin-right: 10px;
+    gap: 3px;
+    align-items: center;
 }
 .habilidades .contenido-seccion .barra .e{
     background-color: #363636;
-    width: 20px;
-    height: 30px;
-    margin-top: 2px;
+    width: 18px;
+    height: 20px;
+    border-radius: 2px;
+    transition: background-color 0.1s ease;
 }
 .calculo{
     display: flex;
     align-items: center;
-    flex-grow: 1;
+    gap: 10px;
 }
 .barra-llena{
-    background-color: #940253;
-    height: 8px;
-    border-radius: 10px;
-    width: 0%;
-    transition: width 0.1s ease;
-    flex-grow: 1;
+    display: none;
 }
 .porcentaje {
-    margin-left: 10px;
     font-weight: bold;
     color: #e6e6e6;
     user-select: none;
     min-width: 45px;
     text-align: right;
-  }
+}
   
   
 /* SECCION RESUMEN */
