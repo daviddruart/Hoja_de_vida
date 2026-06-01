@@ -31,15 +31,21 @@ function animarBarraConNumero(idBarra, idNumero, porcentajeFinal) {
     const barraLlena = document.getElementById(idBarra);
     const numero = document.getElementById(idNumero);
     let anchoActual = 0;
+    
+    // Calcular cuántos frames necesitamos (15ms por frame)
+    const tiempoTotal = 2000; // 2 segundos para todas las barras
+    const frames = tiempoTotal / 15;
+    const incrementoPorFrame = porcentajeFinal / frames;
 
     const intervalo = setInterval(() => {
         if (anchoActual >= porcentajeFinal) {
             clearInterval(intervalo);
+            barraLlena.style.width = porcentajeFinal + '%';
             numero.textContent = porcentajeFinal + '%';
         } else {
-            anchoActual++;
+            anchoActual += incrementoPorFrame;
             barraLlena.style.width = anchoActual + '%';
-            numero.textContent = anchoActual + '%';
+            numero.textContent = Math.floor(anchoActual) + '%';
         }
     }, 15);
 }
