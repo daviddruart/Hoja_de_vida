@@ -238,22 +238,24 @@ html{
 .calculo{
     display: flex;
     align-items: center;
-    flex-grow: 1;
+    gap: 10px;
+    flex: 1;
+    max-width: 400px;
 }
 .barra-llena{
     background-color: #940253;
     height: 8px;
     border-radius: 10px;
     width: 0%;
-    transition: width 0.1s ease;
-    flex-grow: 1;
+    transition: width 0.05s linear;
+    flex: 1;
+    min-width: 0;
 }
 .porcentaje {
-    margin-left: 10px;
     font-weight: bold;
     color: #e6e6e6;
     user-select: none;
-    min-width: 45px;
+    min-width: 40px;
     text-align: right;
   }
   
