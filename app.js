@@ -27,11 +27,11 @@ function crearBarra(id_barra) {
 
 // Lista de habilidades con su ID y cantidad de barras a pintar
 const habilidades = [
-    { id: "logica", cantidad: 16 },
-    { id: "comprension", cantidad: 11 },
-    { id: "lenguaje", cantidad: 11 },
-    { id: "equipo", cantidad: 15 },
-    { id: "aprendizaje", cantidad: 16 },
+    { id: "UX/UI", cantidad: 16 },
+    { id: "FRONTEND", cantidad: 11 },
+    { id: "RESPONSIVE", cantidad: 11 },
+    { id: "LOGICA", cantidad: 15 },
+    { id: "TEAM", cantidad: 16 },
     { id: "versiones", cantidad: 11 }
 ];
 
@@ -107,11 +107,11 @@ function efectoHabilidades() {
 
   if (distancia_skills >= 300 && !animado) {
     animado = true;
-    animarBarraConNumero('logica-barra', 'logica-porcentaje', 98);
-    animarBarraConNumero('comprension-barra', 'comprension-porcentaje', 70);
-    animarBarraConNumero('lenguaje-barra', 'lenguaje-porcentaje', 70);
-    animarBarraConNumero('equipo-barra', 'equipo-porcentaje', 90);
-    animarBarraConNumero('aprendizaje-barra', 'aprendizaje-porcentaje', 80);
+    animarBarraConNumero('UX/UI-barra', 'UX/UI-porcentaje', 98);
+    animarBarraConNumero('FRONTEND-barra', 'FRONTEND-porcentaje', 70);
+    animarBarraConNumero('RESPONSIVE-barra', 'RESPONSIVE-porcentaje', 70);
+    animarBarraConNumero('LOGICA-barra', 'LOGICA-porcentaje', 90);
+    animarBarraConNumero('TEAM-barra', 'TEAM-porcentaje', 80);
     animarBarraConNumero('versiones-barra', 'versiones-porcentaje', 70);
   }
 }
