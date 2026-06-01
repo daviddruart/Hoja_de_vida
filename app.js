@@ -32,6 +32,12 @@ function animarBarraConNumero(idBarra, idNumero, porcentajeFinal) {
     const numero = document.getElementById(idNumero);
     let anchoActual = 0;
     
+    // Calcular la altura en función del porcentaje (mínimo 4px, máximo 25px)
+    const alturaMax = 25;
+    const alturaMin = 4;
+    const altura = alturaMin + (porcentajeFinal / 100) * (alturaMax - alturaMin);
+    barraLlena.style.height = altura + 'px';
+    
     // Calcular cuántos frames necesitamos (15ms por frame)
     const tiempoTotal = 2000; // 2 segundos para todas las barras
     const frames = tiempoTotal / 15;
