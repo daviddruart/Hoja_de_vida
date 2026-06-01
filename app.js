@@ -18,11 +18,11 @@ links.forEach(link => {
 
 // Definir habilidades con sus porcentajes
 const habilidades = [
-    { barra: 'UX/UI-barra', porcentaje: 'UX/UI-porcentaje', valor: 98 },
-    { barra: 'FRONTEND-barra', porcentaje: 'FRONTEND-porcentaje', valor: 70 },
-    { barra: 'RESPONSIVE-barra', porcentaje: 'RESPONSIVE-porcentaje', valor: 70 },
-    { barra: 'LOGICA-barra', porcentaje: 'LOGICA-porcentaje', valor: 90 },
-    { barra: 'TEAM-barra', porcentaje: 'TEAM-porcentaje', valor: 80 },
+    { barra: 'UX/UI-barra', porcentaje: 'UX/UI-porcentaje', valor: 85 },
+    { barra: 'FRONTEND-barra', porcentaje: 'FRONTEND-porcentaje', valor: 90 },
+    { barra: 'RESPONSIVE-barra', porcentaje: 'RESPONSIVE-porcentaje', valor: 90 },
+    { barra: 'LOGICA-barra', porcentaje: 'LOGICA-porcentaje', valor: 85 },
+    { barra: 'TEAM-barra', porcentaje: 'TEAM-porcentaje', valor: 90 },
     { barra: 'versiones-barra', porcentaje: 'versiones-porcentaje', valor: 70 }
 ];
 
@@ -31,12 +31,6 @@ function animarBarraConNumero(idBarra, idNumero, porcentajeFinal) {
     const barraLlena = document.getElementById(idBarra);
     const numero = document.getElementById(idNumero);
     let anchoActual = 0;
-    
-    // Calcular la altura en función del porcentaje (mínimo 4px, máximo 25px)
-    const alturaMax = 25;
-    const alturaMin = 4;
-    const altura = alturaMin + (porcentajeFinal / 100) * (alturaMax - alturaMin);
-    barraLlena.style.height = altura + 'px';
     
     // Calcular cuántos frames necesitamos (15ms por frame)
     const tiempoTotal = 2000; // 2 segundos para todas las barras
