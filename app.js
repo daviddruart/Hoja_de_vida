@@ -16,104 +16,54 @@ links.forEach(link => {
     };
 });
 
-// Crear una barra con 17 divisiones
-function crearBarra(id_barra) {
-    for (let i = 0; i <= 16; i++) {
-        const div = document.createElement("div");
-        div.className = "e";
-        id_barra.appendChild(div);
-    }
-}
-
-// Lista de habilidades con su ID y cantidad de barras a pintar
+// Definir habilidades con sus porcentajes
 const habilidades = [
-    { id: "UX/UI", cantidad: 16 },
-    { id: "FRONTEND", cantidad: 11 },
-    { id: "RESPONSIVE", cantidad: 11 },
-    { id: "LOGICA", cantidad: 15 },
-    { id: "TEAM", cantidad: 16 },
-    { id: "versiones", cantidad: 11 }
+    { barra: 'UX/UI-barra', porcentaje: 'UX/UI-porcentaje', valor: 98 },
+    { barra: 'FRONTEND-barra', porcentaje: 'FRONTEND-porcentaje', valor: 70 },
+    { barra: 'RESPONSIVE-barra', porcentaje: 'RESPONSIVE-porcentaje', valor: 70 },
+    { barra: 'LOGICA-barra', porcentaje: 'LOGICA-porcentaje', valor: 90 },
+    { barra: 'TEAM-barra', porcentaje: 'TEAM-porcentaje', valor: 80 },
+    { barra: 'versiones-barra', porcentaje: 'versiones-porcentaje', valor: 70 }
 ];
 
-// Inicializar barras y contadores
-const contadores = [];
-habilidades.forEach((hab, index) => {
-    const elemento = document.getElementById(hab.id);
-    crearBarra(elemento);
-    contadores[index] = -1;
-});
-
-// Pintar barras animadas
-function pintarBarra(elemento, cantidad, indice, interval) {
-    contadores[indice]++;
-    const x = contadores[indice];
-    if (x < cantidad) {
-        const elementos = elemento.getElementsByClassName("e");
-        elementos[x].style.backgroundColor = "#940253";
-    } else {
-        clearInterval(interval);
-    }
-}
-
-// Función principal para ejecutar todas las animaciones
-function animarBarras() {
-    habilidades.forEach((hab, index) => {
-        const elemento = document.getElementById(hab.id);
-        const intervalo = setInterval(() => {
-            pintarBarra(elemento, hab.cantidad, index, intervalo);
-        }, 100);
-    });
-}
-
-// Observer para detectar cuando la sección entra en pantalla
-let entro = false;
-const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entro) {
-            entro = true;
-            animarBarras();
-            obs.disconnect();
-        }
-    });
-}, { threshold: 0.5 });
-
-observer.observe(document.getElementById("habilidades"));
-
-//
-
-
+// Animar barra con número
 function animarBarraConNumero(idBarra, idNumero, porcentajeFinal) {
-  const barraLlena = document.getElementById(idBarra);
-  const numero = document.getElementById(idNumero);
-  let anchoActual = 0;
+    const barraLlena = document.getElementById(idBarra);
+    const numero = document.getElementById(idNumero);
+    let anchoActual = 0;
 
-  const intervalo = setInterval(() => {
-    if (anchoActual >= porcentajeFinal) {
-      clearInterval(intervalo);
-      numero.textContent = porcentajeFinal + '%';
-    } else {
-      anchoActual++;
-      barraLlena.style.width = anchoActual + '%';
-      numero.textContent = anchoActual + '%';
-    }
-  }, 15);
+    const intervalo = setInterval(() => {
+        if (anchoActual >= porcentajeFinal) {
+            clearInterval(intervalo);
+            numero.textContent = porcentajeFinal + '%';
+        } else {
+            anchoActual++;
+            barraLlena.style.width = anchoActual + '%';
+            numero.textContent = anchoActual + '%';
+        }
+    }, 15);
 }
 
+// Ejecutar animaciones cuando la sección es visible
 let animado = false;
 
 function efectoHabilidades() {
-  const habilidades = document.getElementById("habilidades");
-  const distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+    const seccionHabilidades = document.getElementById("habilidades");
+    
+    if (!seccionHabilidades) return;
+    
+    const posicion = seccionHabilidades.getBoundingClientRect();
+    const distancia = window.innerHeight - posicion.top;
 
-  if (distancia_skills >= 300 && !animado) {
-    animado = true;
-    animarBarraConNumero('UX/UI-barra', 'UX/UI-porcentaje', 98);
-    animarBarraConNumero('FRONTEND-barra', 'FRONTEND-porcentaje', 70);
-    animarBarraConNumero('RESPONSIVE-barra', 'RESPONSIVE-porcentaje', 70);
-    animarBarraConNumero('LOGICA-barra', 'LOGICA-porcentaje', 90);
-    animarBarraConNumero('TEAM-barra', 'TEAM-porcentaje', 80);
-    animarBarraConNumero('versiones-barra', 'versiones-porcentaje', 70);
-  }
+    if (distancia >= 300 && !animado) {
+        animado = true;
+        habilidades.forEach(hab => {
+            animarBarraConNumero(hab.barra, hab.porcentaje, hab.valor);
+        });
+    }
 }
 
 window.addEventListener('scroll', efectoHabilidades);
+
+// También ejecutar al cargar en caso de que ya esté visible
+window.addEventListener('load', efectoHabilidades);
